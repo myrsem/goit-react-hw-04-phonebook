@@ -14,10 +14,10 @@ const App = () => {
     if (isFirstRender.current) {
       const contacts = localStorage.getItem('contacts');
       const parseContacts = JSON.parse(contacts);
-      if (parseContacts) {
+    if (parseContacts) {
         setContacts(parseContacts);
       }
-      isFirstRender.current = false;
+    isFirstRender.current = false;
       return;
     }
     localStorage.setItem('contacts', JSON.stringify(contacts));
