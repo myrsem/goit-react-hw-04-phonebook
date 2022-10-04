@@ -59,7 +59,7 @@ const App = () => {
       <h1>Phonebook</h1>
       <ContactForm onSubmit={addContact}></ContactForm>
       <h2>Contacts</h2>
-      <Filter onChange={changeFilter} />
+      <Filter value={filter} onChange={changeFilter} />
 
       {contacts.length > 0 ? (
         <ContactList

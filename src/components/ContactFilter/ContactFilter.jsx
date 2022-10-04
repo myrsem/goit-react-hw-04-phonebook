@@ -1,13 +1,14 @@
 import { FilterContainer, FilterText, FilterInput } from './ContactFilter.styled';
 import PropTypes from 'prop-types';
 
-const ContactFilter = ({ onChange }) => {
+const ContactFilter = ({ value, onChange }) => {
   return (
       <FilterContainer>
         <FilterText>Find contacts by name</FilterText>
         <FilterInput
           type="text"
           name="filter"
+          value={value}
           onChange={onChange}
         />
       </FilterContainer>
@@ -15,6 +16,7 @@ const ContactFilter = ({ onChange }) => {
 };
 
 ContactFilter.propTypes = {
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
